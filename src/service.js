@@ -38,7 +38,8 @@ const downloadFile = ({ bucket, key }) => s3Service.getObject({
 
 
 const processFile = messageSQS => {
-    return Bluebird.resolve(fileBuffer.Records[0])
+    return Bluebird.resolve(messageSQS)
+        .then(extractStorageMetadata)
         .then(downloadFile)
         .then(neatCsv.parseFile)
         .then(mapStoragePaths)
