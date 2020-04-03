@@ -1,0 +1,28 @@
+{
+  "name": "copy-objects-worker",
+  "version": "1.0.0",
+  "description": "Worker receive message from SQS Queue to copy files from S3 Bucket to another.",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.652.0",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "sqs-consumer": "^5.4.0",
+    "winston": "^3.2.1",
+    "neat-csv": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lveiga/copy-objects-worker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lveiga/copy-objects-worker/issues"
+  },
+  "homepage": "https://github.com/lveiga/copy-objects-worker#readme"
+}
